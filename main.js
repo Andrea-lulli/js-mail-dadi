@@ -52,6 +52,10 @@ console.log(computer);
 
 let esito = document.getElementById("esito");
 
+let esitoComputer = document.getElementById("esito-computer");
+
+let esitoGiocatore = document.getElementById("esito-giocatore");
+
 if (giocatore > computer) {
 
   esito.innerHTML = "Giocatore ha vinto"
@@ -62,8 +66,20 @@ if (giocatore > computer) {
   esito.innerHTML = "Pareggio"
 }
 
+esitoComputer.innerHTML = `Il numero computer è: ${computer}`;
+
+esitoGiocatore.innerHTML = `Il numero giocatore è: ${giocatore}`;
+
+
+
+
 
 // qunate partite ha vinto il giocatore
+
+let risultati = document.getElementById("numerovittorie")
+
+
+
 
 
 
