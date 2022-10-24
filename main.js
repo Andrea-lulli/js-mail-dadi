@@ -17,21 +17,23 @@ console.log(listaMail);
 //inseirie la tua mail
 let mail = prompt('inserire la mail:');
 
-listaMail.push(mail)
+
 
 //controllo della mail
 let controlloMail = document.getElementById("controllomail");
 
 for (let i = 0; i < listaMail.length; i++) {
 
-  if (listaMail[0] == mail) {
+  if (listaMail[i] == mail) {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} è gia presente </p>`;
   } else {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} non è presente </p>`;
-
+    
   }
 
 }
+
+listaMail.push(mail)
 
 
 
@@ -42,8 +44,18 @@ for (let i = 0; i < listaMail.length; i++) {
 // scrivere quante partite ha vinto il giocatore
 // scrivere quante partite ha vinto il computer
 
+let vittorieG = 0
+
+let vittorieC = 0
+
+let winPlayer = document.getElementById("vittorieg")
+
+let winPc = document.getElementById("vittoriec")
+
 
 //genera numero random e stabilisci vincitore
+function dati() {
+
 let giocatore = Math.floor(Math.random() * 6) + 1;
 console.log(giocatore);
 
@@ -56,12 +68,18 @@ let esitoComputer = document.getElementById("esito-computer");
 
 let esitoGiocatore = document.getElementById("esito-giocatore");
 
+
 if (giocatore > computer) {
 
   esito.innerHTML = "Giocatore ha vinto"
+  vittorieG = vittorieG + 1
+   
 
 } else if (giocatore < computer) {
-  esito.innerHTML = "Computer ha vinto"
+  esito.innerHTML = "Computer ha vinto";
+  vittorieC = vittorieC + 1;
+
+
 } else {
   esito.innerHTML = "Pareggio"
 }
@@ -73,10 +91,12 @@ esitoGiocatore.innerHTML = `Il numero giocatore è: ${giocatore}`;
 
 
 
-
 // qunate partite ha vinto il giocatore
 
-let risultati = document.getElementById("numerovittorie")
+winPlayer.innerHTML = `Vittorie totali Giocatore ${vittorieG  }`;
+winPc.innerHTML = `Vittorie totali Computer ${vittorieC }`;
+
+}
 
 
 
