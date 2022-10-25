@@ -33,10 +33,12 @@ for (let i = 0; i < listaMail.length; i++) {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} è gia presente </p>`;
   } else {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} non è presente </p>`;
-  }
+    
+  } 
 }
-
 listaMail.push(mail)
+
+
 
 
 
