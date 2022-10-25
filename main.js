@@ -17,7 +17,8 @@ console.log(listaMail);
 //inseirie la tua mail
 let mail = prompt('inserire la mail:');
 
-
+//veriabile soldatino
+let presenzaEmail = false;
 
 //controllo della mail
 let controlloMail = document.getElementById("controllomail");
@@ -25,12 +26,14 @@ let controlloMail = document.getElementById("controllomail");
 for (let i = 0; i < listaMail.length; i++) {
 
   if (listaMail[i] == mail) {
+    presenzaEmail = true;
+  } 
+
+  if (presenzaEmail == true) {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} è gia presente </p>`;
   } else {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} non è presente </p>`;
-
   }
-
 }
 
 listaMail.push(mail)
