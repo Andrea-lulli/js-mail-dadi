@@ -28,7 +28,7 @@ for (let i = 0; i < listaMail.length; i++) {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} è gia presente </p>`;
   } else {
     controlloMail.innerHTML = `<p class="testo">La tua mail ${mail} non è presente </p>`;
-    
+
   }
 
 }
@@ -56,45 +56,45 @@ let winPc = document.getElementById("vittoriec")
 //genera numero random e stabilisci vincitore
 function dati() {
 
-let giocatore = Math.floor(Math.random() * 6) + 1;
-console.log(giocatore);
+  let giocatore = Math.floor(Math.random() * 6) + 1;
+  console.log(giocatore);
 
-let computer = Math.floor(Math.random() * 6) + 1;
-console.log(computer);
+  let computer = Math.floor(Math.random() * 6) + 1;
+  console.log(computer);
 
-let esito = document.getElementById("esito");
+  let esito = document.getElementById("esito");
 
-let esitoComputer = document.getElementById("esito-computer");
+  let esitoComputer = document.getElementById("esito-computer");
 
-let esitoGiocatore = document.getElementById("esito-giocatore");
-
-
-if (giocatore > computer) {
-
-  esito.innerHTML = "Giocatore ha vinto"
-  vittorieG = vittorieG + 1
-   
-
-} else if (giocatore < computer) {
-  esito.innerHTML = "Computer ha vinto";
-  vittorieC = vittorieC + 1;
+  let esitoGiocatore = document.getElementById("esito-giocatore");
 
 
-} else {
-  esito.innerHTML = "Pareggio"
-}
+  if (giocatore > computer) {
 
-esitoComputer.innerHTML = `Il numero computer è: ${computer}`;
-
-esitoGiocatore.innerHTML = `Il numero giocatore è: ${giocatore}`;
+    esito.innerHTML = "Giocatore ha vinto"
+    vittorieG = vittorieG + 1
 
 
+  } else if (giocatore < computer) {
+    esito.innerHTML = "Computer ha vinto";
+    vittorieC = vittorieC + 1;
 
 
-// qunate partite ha vinto il giocatore
+  } else {
+    esito.innerHTML = "Pareggio"
+  }
 
-winPlayer.innerHTML = `Vittorie totali Giocatore ${vittorieG  }`;
-winPc.innerHTML = `Vittorie totali Computer ${vittorieC }`;
+  esitoComputer.innerHTML = `Il numero computer è: ${computer}`;
+
+  esitoGiocatore.innerHTML = `Il numero giocatore è: ${giocatore}`;
+
+
+
+
+  // qunate partite ha vinto il giocatore
+
+  winPlayer.innerHTML = `Vittorie totali Giocatore ${vittorieG}`;
+  winPc.innerHTML = `Vittorie totali Computer ${vittorieC}`;
 
 }
 
